@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/* remove default margins */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* border-box so that border widths aren't added to the total width of the element: */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Clearfix to make floated elements behave correctly: */
+  .cf:before, .cf:after { content: ""; display: table; }
+  .cf:after { clear: both; }
+  .cf { zoom: 1; }
+  .clear { clear: both; }
+  
+a:focus,
+a:active {
+	outline: none;
+}
+
+/* All images scale proportionally 
+to the size of the container element 
+(usually a div): */
+img {
+	width: 100%;
+	height: auto;
+}
+
+
+body {
+	background-color: moccasin;
+}
+
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+}
+
+nav p {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: #222;
+	font-size: 24px;
+	line-height: 55px;
+	float: left;
+	padding: 0px 20px;
+}
+
+nav ul {
+	float: left; 
+}
+
+nav ul li {
+	float: left;
+	list-style: none;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color: #222;
+	font-size: 14px;
+	padding: 22px 14px;
+	text-decoration: none; 
+}
+
+nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+	display: block;
+	
+}
+
+nav ul li ul li {
+	width: 180px;
+	border-radius: 4px;
+}
+
+nav ul li ul li a {
+	padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+	background-color: #f3f3f3;
+}
+
+.ctblend {
+	width: 46.001%;
+	margin: 100px 0% 0px 2%;
+	float: left;
+}
+
+.part1 p {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 36px;
+	font-weight: 700;
+	float: right;
+	width: 33%;
+	margin-top: 200px;
+	margin-right: 12%;
+}
+
+.greencircle {
+	width: 400px;
+    height: 400px;
+    background: #5ABA47;
+    border-radius: 50%;
+	margin-left: 55%;
+	margin-top: 350px;
+	z-index: -1;
+	mix-blend-mode: multiply;
+	
+	
+}
+
+.purplecircle {
+	width: 600px;
+    height: 600px;
+    background: #7A79B9;
+    border-radius: 50%;
+	margin-left: 50%;
+	position: absolute;
+	bottom: 150px;
+	left: 300px;
+	z-index: -1;
+	mix-blend-mode: normal;
+	
+}
+
+.borderline {
+	border-bottom: 10px solid black;
+	margin: 330px 0% 0px 0%;
+	
+}
+
+.ctcover {
+	margin: 340px 0% 0px 16.667%;
+	float: left;
+}
+
+.redcircle {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background: #B7485F;
+	margin: 130px 0% 0px 52%;
+	position: absolute;
+	z-index: -1;
+}
+
+.bluecircle {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	background: #41ADCE;
+	margin: 100px 0% 0px 46%;
+	position: absolute;
+	z-index: -1;
+	mix-blend-mode: multiply;
+}
+
+.part2 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 36px;
+	font-weight: 700;
+	width: 33%;
+	position: absolute;
+	margin: 140px 0% 0px 21%;
+}
+
+.borderline2 {
+	border-bottom: 10px solid black;
+	margin: 1230px 0% 0px 0%;
+	
+}
+
+.book1 {
+	margin: 200px 0% 0px 16.667%;
+	float: left;
+}
+
+.book2 {
+	margin: 200px 0% 0px 4%;
+	float: left;
+}
+
+.part3 {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 36px;
+	font-weight: 700;
+	width: 33%;
+	margin: 170px 0% 230px 40%;
+}
+
+.yellowcircle {
+	width: 340px;
+	height: 340px;
+	border-radius: 50%;
+	margin: 100px 0% 0px 50%;
+	background: #F2C23E;
+	position: absolute;
+	z-index: -1;
+	mix-blend-mode: multiply;
+	
+}
+
+.pinkcircle {
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	margin: 100px 0% 0px 60%;
+	background: #E276AE;
+	position: absolute;
+	z-index: -2;
+	
+	
+}
+
+.borderline3 {
+	border-bottom: 10px solid black;
+	margin: 2200px 0% 30px 0%;
+}
+
+
+/* ======================================================
+   Media Queries for Responsivness: Desktop First 
+   ====================================================== */
+   
+/* All Rules above "Media Queries" apply to biggest size. List what needs to change on smaller screens. Only list declarations that change:  */
+
+@media (max-width: 768px){
+	
+.part1 p {
+	font-size: 20px;
+}
+	
+.greencircle {
+	width: 175px;
+    height: 175px;
+}
+
+.purplecircle {
+	width: 255px;
+    height: 255px;  
+}
+	
+.redcircle {
+	width: 225px;
+	height: 225px;
+}
+
+.bluecircle {
+	width: 120px;
+	height: 120px;
+}	
+	
+.part2 {
+	font-size: 20px;
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
